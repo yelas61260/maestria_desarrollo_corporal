@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		body {
+			font-size: 16px;
+			font-family: cursive;
+		}
+		#e1main {
+		    display: table;
+		    width: 100%;
+		    height: 100%;
+		}
+		#e1d1 {
+		    width: 50%;
+		    display: table-cell;
+		    text-align: center;
+		    vertical-align: middle;
+		}
+		#e1d2 {
+		    width: 50%;
+		    display: table-cell;
+		    padding-right: 50px;
+		}
+		#e1d2 img {
+		    height: 300px;
+		}
+		#botones div {
+		    text-align: center;
+		    border-radius: 10%;
+		    border: solid;
+		    width: 200px;
+		    display: inline-block;
+		    background: lightskyblue;
+		}
+		.cont {
+			display: none;
+		}
+		p {
+			text-align: justify;
+		}
+		h5 {
+			font-size: 12px;
+		}
+		h1 {
+			font-size: 50px;
+		}
+	</style>
+</head>
+<body style=" height: 100%;">
+	<script type="text/javascript">
+		function btn1() {
+			document.getElementById("cont1").style.display = "block";
+			document.getElementById("cont2").style.display = "none";
+			document.getElementById("cont3").style.display = "none";
+			document.getElementById("cont4").style.display = "none";
+		}
+		function btn2() {
+			document.getElementById("cont1").style.display = "none";
+			document.getElementById("cont2").style.display = "block";
+			document.getElementById("cont3").style.display = "none";
+			document.getElementById("cont4").style.display = "none";
+		}
+		function btn3() {
+			document.getElementById("cont1").style.display = "none";
+			document.getElementById("cont2").style.display = "none";
+			document.getElementById("cont3").style.display = "block";
+			document.getElementById("cont4").style.display = "none";
+		}
+		function btn4() {
+			document.getElementById("cont1").style.display = "none";
+			document.getElementById("cont2").style.display = "none";
+			document.getElementById("cont3").style.display = "none";
+			document.getElementById("cont4").style.display = "block";
+		}
+		
+	</script>
+	<div id="e1main">
+		<div id="e1d1">
+			<h1>Cuerpo y mente</h1>
+		</div>
+		<div id="e1d2">
+			<h5>Presione cada sección para visualizar el contenido</h5>
+			<div id="botones">
+				<div id="btn1" onclick="btn1();">Filosofia</div>
+				<div id="btn2" onclick="btn2();">Gallo (2007)</div>
+				<div id="btn3" onclick="btn3();">Etimología</div>
+				<div id="btn3" onclick="btn4();">Desarrollo corporal</div>
+			</div>
+			<div class="cont" id="cont1">
+				<h3>Filosofia</h3>
+				<p>Platón y Aristóteles consideran que el ser humano es un cuerpo y un alma o espíritu que lo constituyen o forman una unidad.</p>
+				<div style="text-align: center;"><img src="image/filosofia.jpeg"><h5>Fuente: Ferrater, J. (2016). El Cuerpo en términos Filosóficos.</h5></div>	
+			</div>
+			<div class="cont" id="cont2">
+				<h3>Gallo (2007)</h3>
+				<p>El cuerpo es entendido como un conjunto de estructuras organicas que le sirven de instrumento a la mente.</p>
+				<div style="text-align: center;"><img src="image/gallo_2007.jpeg"><h5>Fuente: Parra, S. (SF). Niveles de Organización del Cuerpo Humano.</h5></div>
+			</div>
+			<div class="cont" id="cont3">
+				<h3>Etimología</h3>
+				<p>Procede del latin “corpus” refiriendose a la figura del cuerpo humano que está formado por cabeza, tronco y extremidades.</p>
+				<div style="text-align: center;"><img src="image/etimologia.jpeg"><h5>Fuente: Ortiz, V. (2017). Las maravillas del cuerpo humano.</h5></div>				
+			</div>
+			<div class="cont" id="cont4">
+				<h3>Desarrollo corporal</h3>
+				<p>La representación que tenemos de nuestro cuerpo y sus partes, de las posibilidades de movimiento y acción, también de las diferentes limitaciones.</p>
+				<p>Contribuye a  la formación integral de las personas mediante aprendizajes.</p>
+				<p>Factores que inciden en el desarrollo son Diferencias individuales, Herencia, Medio Ambiente, Maduración, Familia, Condiciones, Cultura y Grupo étnico</p>
+				<h4>Permiten:</h4>
+				<ul>
+					<li>Adquirir conciencia de si</li>
+					<li>Mejorar sus desempeños motores</li>
+					<li>Canalizar su potencial creativo</li>
+					<li>Establecer relaciones interpersonales</li>
+					<li>Promover y cuidar del cuerpo</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+@font-face {
+font-family: 'Contenidos';
+
+src:
+    local('Aller'),
+    local('Aller'),
+    url('../recursos/fuentes/Aller.ttf');
+}
