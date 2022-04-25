@@ -1,4 +1,4 @@
-var EscenaActual = 1;
+var EscenaActual = 6;
 var MostrandoMenu = false;
 var TieneIndicador = true;
 var MostrandoAyuda = false;
@@ -14,7 +14,7 @@ var BtnContinuar = '<img src="recursos/Imagen_moviles.jpg" width="1280" style="c
 var ImgCargando = '<img src="recursos/cargandodatos.gif" width="240" style="padding-top:300px;padding-left:50px">';
 
 var DatosEscenas = [
-            ["Bienvenida",0],//1
+            ["Bienvenida",2],//1
             ["Cuerpo y mente",0],//2
 		    ["Cuerpo y mente",0],//3
 		    ["Corporeidad",0],//4
@@ -27,10 +27,6 @@ var DatosEscenas = [
 		    ["Referencias bibliograficas",0],//11
 		    ["Referencias bibliograficas",0]//12
 ];
-
-function mensaje(){
-	alert("llamar");
-}
 
 var DatosMenu = [
 	["Bienvenida",1],
@@ -58,10 +54,7 @@ $("#carga").hide();
 $("#carga").append(ImgCargando);
 $("#carga").show();
 $(".ocultos").hide();
-$("#Elemento-Indicador").hide();
 $("#BotonAtras").hide();
-$("#BotonAtras").hide();
-$("#EnlacesMenu").hide(); 
 
 var isMobile =
 {
@@ -155,15 +148,9 @@ function EscalarIframe()
 }
 
 function IniciarEscena(){
-
-	Iniciarmenu();
 	$("#Intro").hide();
 	$("#carga").hide();
 
-	if($_GET['EscenaActual']){
-		EscenaActual = $_GET['EscenaActual'];
-	}
-		
 	if(isMobile.any() && DispositivosMoviles==true){
 			$("#Intro").show();
 			$("#Intro").html("");
@@ -200,15 +187,6 @@ function IniciarEscena(){
 	CargarRecursos();
 }
 
-
-function Iniciarmenu()
-{
- for(i=0; i<DatosMenu.length; i++)
- {
-  $("#modulos").append("<li id='MenuEnlaces' onclick='IrEscena(" + DatosMenu[i][1] + ")'><p>"+DatosMenu[i][0]+"</p></li>");
- }
-}
-
 function Cargar_Escena(){
 	DefinirBotones();
 	PasoActual = 1
@@ -237,109 +215,17 @@ function Cargar_Escena(){
 function CargarRecursos(){
 	$("#BotonAdelante").click(Siguiente_Escena);
 	$("#BotonAtras").click(Anterior_Escena);
-
-	$("#btn_home").click(irInicioPrincipal);
-
-	
-	$("#btn_menu").click(function ()
-	{
-		if(!MostrandoMenu)
-		{
-			$("#modulos").show();	
-			$("#LegalId").show();
-			$("#AyudaId").show();
-			$("#BotonMenu").show();
-			MostrandoMenu = true;
-		}
-		else
-		{
-			$("#modulos").hide();	
-			$("#BotonMenu").hide();
-			$("#LegalId").hide();
-			$("#AyudaId").hide();
-			MostrandoMenu = false;
-		}
-	});
-
-	$(".BotonLegal").click(function (){
-			$("#modulos").hide();	
-			$("#LegalId").hide();
-			$("#AyudaId").hide();
-			$("#BotonMenu").hide();
-			MostrandoMenu = false;
-					
-		if(!MostrandoAyuda){
-			MostrandoAyuda = true;
-			$(".VentanaAyuda").prepend('<div id="BotonCerrar"><img src="recursos/boton_cerrar.png"></div>');
-			$(".VentanaAyuda").append('<img src="recursos/pagina_legal.jpeg">');
-			$(".VentanaAyuda").css({'z-index': '2000'});
-			$(".VentanaAyuda").css({'display': 'initial'});
-		}else{
-			MostrandoAyuda = false;
-			$(".VentanaAyuda").html('');
-			$(".VentanaAyuda").css({'display': 'none'});
-		}
-	});
-
-	$('.VentanaAyuda').on('click', '#BotonCerrar', function(){
-		MostrandoAyuda = false;
-		$(".VentanaAyuda").html('');
-			$(".VentanaAyuda").css({'display': 'none'});
-	});
-
-
 }
 
 function irInicioPrincipal(){
 	IrEscena(1);
 }
 
-
 function IrEscena(numero){
-	Ocultar_Elemento_Indicador();
-	$("#modulos").hide();	
-	$("#BotonMenu").hide();
-	$("#LegalId").hide();
-	$("#AyudaId").hide();
-	MostrandoMenu = false;
-	
 	EscenaActual = numero;
 	Cargar_Escena();
 }
 
-//FUNCIONES ELEMENTO INDICADOR
-
-function Habilitar_Boton_Siguiente()
-{
-	$("#BotonAdelante").show();
-	if(TieneIndicador){
-		Mostrar_Elemento_Indicador("der","1135px", "280px");
-	}
-		
-}
-
-function Mostrar_Elemento_Indicador(Apuntando, MarginLeft, MarginTop)
-{
-	if(TieneIndicador)
-	{
-		Ocultar_Elemento_Indicador();
-		$("#Elemento-Indicador img").attr('src', 'recursos/indicador_' +Apuntando+ '.png');
-		$("#Elemento-Indicador").show();
-		$("#Elemento-Indicador img").animate({marginTop: MarginTop, marginLeft: MarginLeft},0);
-
-	}
-}
-
-function Ocultar_Elemento_Indicador()
-{
-	if(TieneIndicador)
-	{
-		$("#Elemento-Indicador").hide();
-		$("#Elemento-Indicador").animate({marginTop: "0px", marginLeft: "0px"},0);
-	}
-}
-
-// FIN FUNCIONES ELEMENTO INDICADOR
 function Siguiente_Escena(){
 	if(EscenaActual < DatosEscenas.length){
 		EscenaActual++;
@@ -367,13 +253,34 @@ function DefinirBotones(){
 		$("#BotonAtras").show();
 		$("#BotonAdelante").hide();		
 	}
-	else if(DatosEscenas[EscenaActual-1][1]==1)
-	{
-		$("#BotonAtras").show();
-		$("#BotonAdelante").hide();
-	}
 	else{
 		$("#BotonAtras").show();
 		$("#BotonAdelante").show();
 	}
+
+
+	if(DatosEscenas[EscenaActual-1][1]==1)
+	{
+		$("#BotonAtras").show();
+		$("#BotonAdelante").hide();
+	}
+	else if(DatosEscenas[EscenaActual-1][1]==2)
+	{
+		$("#BotonAtras").hide();
+		$("#BotonAdelante").hide();
+	}
+}
+
+if (window.addEventListener) {
+    window.addEventListener("message", onMessage, false);        
+} 
+else if (window.attachEvent) {
+    window.attachEvent("onmessage", onMessage, false);
+}
+
+function onMessage(event) {
+    var data = event.data;
+    if (typeof(window[data.func]) == "function") {
+        window[data.func].call(null, data.message);
+    }
 }

@@ -1,614 +1,191 @@
-*{
- margin:0;
- padding:0;
+/* Titulos */
+/* line 1, ../../../../../Users/cristianyela/Documents/GitHub/maestria_desarrollo_corporal/css/sass/_general.scss */
+* {
+  margin: 0;
+  font-family: cursive;
+  padding: 0;
 }
 
-/*@font-face
-{
-    /*font-family: 'Contenidos';
-    src:
-    local('Alright Sans'),
-    local('Alright Sans'),
-    font-family: "Alright Sans";
-    src: url("../recursos/fuentes/Alright Sans.otf") format("opentype");
-}*/
-
-@font-face
-{
-   font-family: 'Contenidos';
-    src:
-    local('Helvetica-Light'),
-    url("../recursos/fuentes/HelveticaLt.ttf") format("opentype"),
-    url("../recursos/fuentes/HelveticaLt.ttf") format("truetype");
+/* line 7, ../../../../../Users/cristianyela/Documents/GitHub/maestria_desarrollo_corporal/css/sass/_general.scss */
+body {
+  text-align: center;
+  font-size: 16px;
+  font-family: cursive;
 }
 
-
-
-body
-{
- text-align:center;
+/* line 14, ../../../../../Users/cristianyela/Documents/GitHub/maestria_desarrollo_corporal/css/sass/_general.scss */
+iframe {
+  width: 100%;
+  height: 100%;
+  border: 0px none;
+  overflow: hidden;
 }
 
-#wrapper
-{
- margin:0px auto;
-}
-
-#content
-{
-overflow: hidden;
-width: 1280px;
-height: 768px;
-margin: auto;
-}
-
-iframe
-{
-width: 100%;
-height: 100%;
-border: 0px none;
-overflow: hidden;
-}
-
+/* line 22, ../../../../../Users/cristianyela/Documents/GitHub/maestria_desarrollo_corporal/css/sass/_general.scss */
 iframe body {
-    position: absolute;
+  position: absolute;
 }
 
-#VencarAyuda{
-width: 100%;
-height: 700px;
+/* line 26, ../../../../../Users/cristianyela/Documents/GitHub/maestria_desarrollo_corporal/css/sass/_general.scss */
+#wrapper {
+  margin: 0px auto;
 }
 
-.texto-barra-progreso
-{
- color: #000;
- font-size: 16px;
- font-weight: bold;
- width: 100px;
- float: left;
- margin: 0px 0px 0px 190px;
+/* line 31, ../../../../../Users/cristianyela/Documents/GitHub/maestria_desarrollo_corporal/css/sass/_general.scss */
+#content {
+  overflow: hidden;
+  width: 1280px;
+  height: 768px;
+  margin: auto;
 }
 
-
-/*//////////////////////////////////////////////WM//////////////////////////////////////////////////////////////*/
-#BarraPrincipal{
-    position: relative;
-    width: 100%;
-    height: 73px;
-    background: white;
-    background-size: cover;
+/* line 39, ../../../../../Users/cristianyela/Documents/GitHub/maestria_desarrollo_corporal/css/sass/_general.scss */
+.CuadroContenido {
+  display: inline-block;
+  width: 1280px;
+  height: 677px;
+  background: white;
 }
 
-#btn_menu,#btn_home,#btn_sonido{
-     position: absolute;  
-     cursor: pointer;
-     width: 3%;
-     height: 100%;
-     margin-top:22px;
-}
-
-#btn_menu{
-    left: 1200px;
-}
-
-#btn_home{
-    left: 1130px;
-}
-
-
-#btn_sonido{
-    left: 1060px;  
-}
-
-#btn_logo{
-    left: 50px;
-    position: absolute;  
-     cursor: pointer;
-     width: 3%;
-     height: 100%;
-     margin-top:15px;
-}
-
-#btn_fondo{
-    right: 80px;
-    position: absolute;  
-    width: 3%;
-    height: 100%;
-    margin-top: 685px;
-}
-
-#btn_fondo img{
-    height:100px; 
-    width: 120px;
-}
-
-
-.BarraDatosEscenas
-{
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    height: 18px;
-    background: none repeat scroll 0% center #423F40;
-}
-
-
-.BarraTituloEscenas
-{
-    display: inline-block;
-    position: relative;
-    color: #FFF;
-    width: 70%;
-    float: left;
-    padding: 0% 0% 0% 2%;
-}
-
-
-#TextoEscenas
-{
-    font-weight: bold;
-    float: left;
-    font-size: 15px;
-    font-family: arial;
-}
-
-
-
-
-
-.BarraNumeroEscena
-{
-    margin-top:20px;
-    width: 10%;
-    position: relative;
-    display: inline-block;
-    color: #000000;
-    font-weight: normal;
-}
-
-
-.CuadroContenido
-{
-     display: inline-block;
-     width: 1280px;
-     height: 677px;
-     background: none repeat scroll 0% 0% rgb(118, 122, 147);
-}
-
-
-/*///////////////////////////VENTANA EMERGENTE/////////////////////////////////*/
-.BarraAuxiliar
-{
-display: inline-block;
-width: 100%;
-height: 85px;
-}
-
-.BarraAvance
-{
-position: relative;
-display: inline-block;
-width: 10%;
-color:white;
-font-size: 22px;
-float:right;
-margin-top: 18px;
-}
-
-.BarraCerrarAuxiliar{
-    position: relative;
-    float: right;
-    display: inline-block;
-    width: 10%;
-    cursor: pointer;
-    float: right;
-    margin-top: 17px;
-}
-
-.BarraLogoCliente
- {
-
+/* line 47, ../../../../../Users/cristianyela/Documents/GitHub/maestria_desarrollo_corporal/css/sass/_general.scss */
+div.tarjeta_02 {
   float: left;
-    margin: 20px 0px 0px 20px;
-    font-size: 24px;
-    color: white;
-    font-weight: bold;
-}
-/*///////////////////////////FIN VENTANA EMERGENTE/////////////////////////////////*/
-
-#NombreLeccion
-{
- color: #FFF;
- float: right;
- font-size: 10px;
- padding: 0px 10px;
+  overflow: hidden;
+  width: 96%;
+  margin: 0 2% 2% 2%;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-position: center center;
+  background-size: 100% auto;
+  height: 180px;
+  border-radius: 7px;
+  transition: all 0.3s;
+  position: relative;
 }
 
-#NombreModulo
-{
- font-size: 60px;
- float: right;
- padding: 0px 10px;
+/* line 61, ../../../../../Users/cristianyela/Documents/GitHub/maestria_desarrollo_corporal/css/sass/_general.scss */
+div.nombre_modulo {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  padding: 10px;
+  color: #fff;
 }
 
-
-
-#BotonMenu
-{
-position: absolute;
-top: 65px;
-width: 400px;
-z-index: 2000;
-right:0px;
-padding:0px;
-background:rgba(249,249,249,11.80);
+/* line 68, ../../../../../Users/cristianyela/Documents/GitHub/maestria_desarrollo_corporal/css/sass/_general.scss */
+div.tarjeta_02 .filtro_02 {
+  width: 100%;
+  height: 180px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
 }
 
-#BotonMenu2
-{
-position: absolute;
-top: 54px;
-width: 400px;
-z-index:0;
-height:420px;
-right:400px;
-padding-top:10px;
-background:rgba(0,154,154,.9);
+/* line 75, ../../../../../Users/cristianyela/Documents/GitHub/maestria_desarrollo_corporal/css/sass/_general.scss */
+div.tarjeta_02 p {
+  color: #fff;
+  padding: 2px 10px;
+  position: absolute;
+  bottom: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  height: auto;
+  max-height: 77px;
 }
 
-#BotonMenu img
-{
- float: top;
+/* line 85, ../../../../../Users/cristianyela/Documents/GitHub/maestria_desarrollo_corporal/css/sass/_general.scss */
+.parrafo {
+  font-size: 28px;
+  text-align: justify;
 }
 
-#modulos {
-    font-size:20px !important; 
-    list-style:none; 
-    text-align:left; 
-    line-height:22px; 
-    width:350px; 
-    margin:auto;
-}
-#modulos li {
-    color:#5a5351; 
-    border:0; 
-    border-bottom:3px solid #a39f9e; 
-    margin-top:5px; 
-    cursor:pointer; 
-    text-align:center;
+/* line 90, ../../../../../Users/cristianyela/Documents/GitHub/maestria_desarrollo_corporal/css/sass/_general.scss */
+.caja_texto {
+  border-radius: 25px;
+  border-style: groove;
 }
 
-.BotonFooter
-{
- display: inline-block;
- cursor: pointer;
- position: relative;
+/* line 95, ../../../../../Users/cristianyela/Documents/GitHub/maestria_desarrollo_corporal/css/sass/_general.scss */
+.menu a {
+  cursor: pointer;
 }
 
-#BotonSonido
-{
- display: inline-block;
- cursor: pointer;
+/* line 99, ../../../../../Users/cristianyela/Documents/GitHub/maestria_desarrollo_corporal/css/sass/_general.scss */
+.title1 {
+  font-size: 75px;
 }
 
-.LogoHemisferio
-{
- display: inline-block;
- position: absolute;
- bottom: 11px;
- right: 265px;
+@keyframes example {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background-color: yellow;
+    left: 200px;
+    top: 0px;
+  }
+  50% {
+    background-color: blue;
+    left: 200px;
+    top: 200px;
+  }
+  75% {
+    background-color: green;
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
 }
 
-.FondoNavegacion
-{
- display: none;
- position: absolute;
- bottom: 10px;
- right: 10px;
+/* line 1, ../../../../../Users/cristianyela/Documents/GitHub/maestria_desarrollo_corporal/css/sass/_tools.scss */
+.barraPrincipal {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  background: white;
 }
 
-
-#Elemento-Indicador{
-width: 70px;
-height: 70px;
-position: absolute;
-z-index: 1;
+/* line 7, ../../../../../Users/cristianyela/Documents/GitHub/maestria_desarrollo_corporal/css/sass/_tools.scss */
+.barraPrincipal #BotonAtras {
+  display: inline-block;
+  z-index: 1000;
+  bottom: 6px;
+  cursor: pointer;
+  height: 100%;
+  float: left;
 }
 
-#Elemento-Indicador img{
-  width: 70px;
-  height: 70px;   
+/* line 16, ../../../../../Users/cristianyela/Documents/GitHub/maestria_desarrollo_corporal/css/sass/_tools.scss */
+.barraPrincipal #BotonAtras img {
+  height: 100%;
+  transform: rotate(180deg);
+  float: left;
 }
 
-#BotonAtras
-{
- display: inline-block;
- position: absolute;
- margin: 330px 0px;
- z-index: 1000;
- bottom: 6px;
- cursor: pointer;
+/* line 23, ../../../../../Users/cristianyela/Documents/GitHub/maestria_desarrollo_corporal/css/sass/_tools.scss */
+.barraPrincipal #BotonAdelante {
+  bottom: 6px;
+  display: inline-block;
+  z-index: 1000;
+  cursor: pointer;
+  height: 100%;
+  float: right;
 }
 
-#BotonAdelante
-{
-position: absolute;
-bottom: 6px;
-margin: 330px 0px;
-display: inline-block;
-z-index: 1000;
-cursor: pointer;
-right: 0px;
+/* line 32, ../../../../../Users/cristianyela/Documents/GitHub/maestria_desarrollo_corporal/css/sass/_tools.scss */
+.barraPrincipal #BotonAdelante img {
+  height: 100%;
+  float: right;
 }
 
-.VentanaAyuda
-{
- position: absolute;
- top: 95px;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0,5);
+/* line 38, ../../../../../Users/cristianyela/Documents/GitHub/maestria_desarrollo_corporal/css/sass/_tools.scss */
+.barraPrincipal #btn_interfaz {
+  position: absolute;
+  cursor: pointer;
+  height: 100%;
+  left: 370px;
 }
 
-#BotonCerrar
-{
- position: absolute;
- right: 0px;
- margin: 10px;
- z-index: 1000;
- cursor: pointer;
-}
-
-#VentanaMenu
-{
-position: absolute;
-z-index: -1000;
-top: 32px;
-left: 39%;
-height: 216px;
-display:none;
-}
-
-#VentanaMenu img
-{
- float: right;
-}
-
-.ListaMenu
-{
- background: url(../recursos/lista_menu.png) no-repeat;
-}
-
-.MenuEnlace
-{
- display: block;
-}
-
-#EnlacesMenu
-{
-position: absolute;
-z-index: 1000;
-top: 220px;
-width: 230px;
-text-align: left;
-background: url(../recursos/titulo_menu.png) no-repeat;
-height: auto;
-padding: 30px 0px;
-right: -250px;
-}
-
-#EnlacesMenu a
-{
- color: #000;
- padding: 0px 0px 0px 20px;
- font-size: 14px;
- position: relative;
-}
-
-
-
-.texto-barra-titulo-modulo
-{
- float: right;
- color: #FFF;
- padding: 10px 10px;
- width: 590px;
- text-align: right;
- font-size: 18px;
- margin-top: -5px;
- font-family: 'verdana';
-}
-.texto-barra-titulo-leccion
-{
- float: right;
- color: #FFF;
- padding: 0px 10px;
- width: 590px;
- text-align: right;
- font-size: 18px;
- margin-top: -20px;
- font-family: 'verdana';
-}
-.texto-numero-titulo-escena
-{
- float: right;
- color: #FFF;
- padding: 0px 10px;
- width: 590px;
- text-align: right;
- font-size: 18px;
- margin-top: -10px;
- font-family: 'verdana';
-}
-
-
-
-
-
-#NumeroEscena
-{
-    float: right;
-}
-
-.BarraFinal
-{
-position: relative;
-width: 50%;
-display: inline-block;
-float: right;
-
-}
-
-
-.BotonMenu1
-{
- font-size: 20px;
- cursor: pointer;
- display: inline-block;
- margin: 12px 15px 0px;
-}
-
-.BotonMenu2
-{
- font-size: 20px;
- cursor: pointer;
- display: inline-block;
- margin: 12px 15px 0px;
-}
-
-a:hover {text-decoration:none !important;}
-
-.SpriteLogoCliente
-{
- background:url("../recursos/sprite.png");
- background-position: 0px -528px;
- width: 165px;
- height: 52px;
-}
-
-.SpriteBotonHome
-{
- background:url("../recursos/sprite.png");
- background-position: 0px -314px;
- width: 30px;
- height: 27px;
-}
-
-.SpriteBotonHome
-{
- background:url("../recursos/sprite.png");
- background-position: 0px -314px;
- width: 30px;
- height: 27px;
-}
-
-.SpriteBotonMenu
-{
- background:url("../recursos/sprite.png");
- background-position: 0px -492px;
- width: 26px;
- height: 26px;
-}
-
-.SpriteBotonAtras
-{
- background:url("../recursos/sprite.png");
- background-position: 0px -54px;
- width: 39px;
- height: 44px;
-
-}
-
-.SpriteBotonAdelante
-{
- background:url("../recursos/sprite.png");
- background-position: 0px 0px;
- width: 39px;
- height: 44px;
-}
-
-
-.BotonHome
-{
-    display: inline-block;
-    height: 50px;
-    cursor: pointer;
-    margin-top: 20px;
-    background: #93acc0;
-    width: 196px;
-}
-
-#BotonMenuTemp
-{
-position: absolute;
-top: 84px;
-
-z-index: 1500;
-cursor: pointer;
-height: 33px;
-
-width: 100%;
-margin: 0px auto;
-}
-
-#BotonMenuTemp img
-{
- float: top;
-}
-
-
-
-
-
-
-
-#NumeroEscena
-{
-font-size: 20px;
-font-weight: bold;
-float: right;
-font-family: arial;
-margin-right: 20px;
-color: white;
-}
-
-.BarraPorcentageEscena{
-width: 5%;
-position: relative;
-display: inline-block;
-color: white;
-}
-
-#PorcentajeEscena{
-font-size: 20px;
-font-weight: bold;
-float: right;
-font-family: arial;   
-}
-
-.BarraPorcentage{
-width: 25%;
-height: 40%;
-position: relative;
-display: inline-block;
-background: white;
-top: -7px;
-left: 15px;
-}
-
-
-#ColoreaBarra{
-width: 100%;
-height: 100%;
-/*background: #4D4D4D;*/
-float: left;
-color: #4D4D4D;
-}
-
-#tituloGenneralIntro {
-    float: left;
-    margin: 20px 0px 0px 20px;
-    font-size: 24px;
-    color: white;
-    font-weight: bold;
-}
+/*# sourceMappingURL=style.css.map */

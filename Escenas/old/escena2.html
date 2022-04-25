@@ -6,16 +6,23 @@
       <link href="../css/style.css" rel="stylesheet">
       <link href="css/bootstrap.css" rel="stylesheet">
       <script src="js/bootstrap.js"></script>
-      <script src="js/action.js"></script>
+      <script type="text/javascript">
+         function gotoEscena(numero){
+         	window.parent.postMessage({
+         	    'func': 'IrEscena',
+         	    'message': numero
+         	}, "*");
+         }
+      </script>
    </head>
    <body class="h-100">
-      <div class="container mt-5">
+      <div class="container">
          <div class="row text-center h-25">
             <h1>Motricidad: educar con movimiento</h1>
          </div>
-         <div class="row mt-5 menu">
+         <div class="row">
             <div class="col-md-3">
-               <a onclick="gotoEscena(3);">
+               <a onclick="gotoEscena(2);">
                   <div class="tarjeta_02" style="background-image: url('image/menu/opc1.jpeg');">
                      <div class="nombre_modulo">Módulo 1</div>
                      <div class="filtro_02"></div>

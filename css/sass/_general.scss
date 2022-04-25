@@ -1,0 +1,109 @@
+*{
+ margin:0;
+ font-family: cursive;
+ padding:0;
+}
+
+body
+{
+ text-align:center;
+            font-size: 16px;
+            font-family: cursive;
+}
+
+iframe
+{
+width: 100%;
+height: 100%;
+border: 0px none;
+overflow: hidden;
+}
+
+iframe body {
+    position: absolute;
+}
+
+#wrapper
+{
+ margin:0px auto;
+}
+
+#content
+{
+    overflow: hidden;
+    width: 1280px;
+    height: 768px;
+    margin: auto;
+}
+
+.CuadroContenido
+{
+     display: inline-block;
+     width: 1280px;
+     height: 677px;
+     background: white;
+}
+
+div.tarjeta_02 {
+    float: left;
+    overflow: hidden;
+    width: 96%;
+    margin: 0 2% 2% 2%;
+    background-color: rgba(0, 0, 0, 0.2);
+    background-position: center center;
+    background-size: 100% auto;
+    height: 180px;
+    border-radius: 7px;
+    transition: all 0.3s;
+    position: relative;
+}
+
+div.nombre_modulo {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+}
+
+div.tarjeta_02 .filtro_02 {
+    width: 100%;
+    height: 180px;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+}
+
+div.tarjeta_02 p {
+    color: #fff;
+    padding: 2px 10px;
+    position: absolute;
+    bottom: 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    height: auto;
+    max-height: 77px;
+}
+
+.parrafo {
+    font-size: 28px;
+    text-align: justify;
+}
+
+.caja_texto {
+    border-radius: 25px;
+    border-style: groove;
+}
+
+.menu a {
+    cursor: pointer;
+}
+
+.title1 {
+    font-size: 75px;
+}
+
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
