@@ -36,11 +36,12 @@ var DatosEscenas = [
 		    ["Modulo 3",3],//20
 		    ["Modulo 4",1],//21
 		    ["Modulo 4",3],//22
-		    ["Modulo 5",0],//23
-		    ["Modulo 6",0],//24
-		    ["Modulo 6",1],//25
-		    ["Modulo 6",3],//26
-		    ["Modulo 7",0]//27
+		    ["Modulo 5",1],//23
+		    ["Modulo 5",3],//24
+		    ["Modulo 6",0],//25
+		    ["Modulo 6",1],//26
+		    ["Modulo 6",3],//27
+		    ["Modulo 7",0]//28
 ];
 
 var DatosMenu = [
@@ -212,16 +213,20 @@ function Cargar_Escena(){
 
 	$("#TextoEscenas").html(DatosEscenas[EscenaActual-1][0]);
 	$("#NumeroEscena").html(EscenaActual + " / " + DatosEscenas.length);
-
 	$("#content_frame").hide();
-	$("#content_frame").attr("src", "Escenas/escena"+EscenaActual+".html");
-	$("#carga").show();
+	if (EscenaActual == 28) {
+		$("#content_frame_act").show();
+	}else{
+		$("#content_frame_act").hide();
+		$("#content_frame").attr("src", "Escenas/escena"+EscenaActual+".html");
+		$("#carga").show();
 
-	$("#content_frame").load( function()
-	{
-		$("#carga").hide();
-		$("#content_frame").show();
-	});
+		$("#content_frame").load( function()
+		{
+			$("#carga").hide();
+			$("#content_frame").show();
+		});
+	}
 
 	var Porcentaje = 100/DatosEscenas.length;
 	var Total = Porcentaje * EscenaActual;

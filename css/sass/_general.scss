@@ -91,7 +91,7 @@ div.tarjeta_03 {
     background-color: rgba(0, 0, 0, 0.2);
     background-position: center center;
     background-size: 100% auto;
-    height: 180px;
+    height: 260px;
     border-radius: 7px;
     transition: all 0.3s;
     position: relative;
@@ -108,8 +108,8 @@ div.tarjeta_03 div.nombre_modulo {
 
 div.tarjeta_03 .filtro_02 {
     width: 100%;
-    height: 180px;
-    background-color: rgba(0, 0, 0, 0.2);
+    height: 260px;
+    background-color: rgba(0, 0, 0, 0.4);
     position: absolute;
 }
 
@@ -121,6 +121,7 @@ div.tarjeta_03 p {
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
     height: auto;
     max-height: 77px;
+    font-size: 25px;
 }
 
 .parrafo {
@@ -165,3 +166,23 @@ div.tarjeta_03 p {
 .retro div.retro_cont {
     display: none;
 }
+
+
+         .fondo{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.6;
+         }
+
+         .fondo_normal{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+         }
