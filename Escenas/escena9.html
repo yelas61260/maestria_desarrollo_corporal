@@ -1,66 +1,41 @@
 <!DOCTYPE html>
 <html style="height: 100%;">
-<head>
-	<meta charset="utf-8">
-	<title></title>
-	<style type="text/css">
-		body {
-			font-size: 16px;
-			font-family: cursive;
-		}
-		#e1main {
-		    display: table;
-		    width: 100%;
-		    height: 100%;
-		}
-		#e1d1 {
-		    width: 50%;
-		    display: table-cell;
-		    text-align: center;
-		    vertical-align: middle;
-		}
-		#e1d2 {
-		    width: 50%;
-		    display: table-cell;
-		    padding-right: 50px;
-		}
-		#e1d2 img {
-		    height: 250px;
-		}
-		#botones div {
-		    text-align: center;
-		    border-radius: 10%;
-		    border: solid;
-		    width: 200px;
-		    display: inline-block;
-		    background: lightskyblue;
-		}
-		.cont {
-			display: none;
-		}
-		p {
-			text-align: justify;
-		}
-		h5 {
-			font-size: 12px;
-		}
-		h1 {
-			font-size: 50px;
-		}
-	</style>
-</head>
-<body style=" height: 100%;">
-	<div id="e1main">
-		<div id="e1d1">
-			<h1>Reflexión</h1>
-		</div>
-		<div id="e1d2">
-			<p>Con la realización de este trabajo, se generaron muchos cuestionamientos desde mi quehacer como educadora.</p>
-			<p>Todo parte desde mi formación como docente, mientras estudiaba mi carrera de licenciatura en Educación básica con énfasis en Ciencias Naturales y Educación ambiental, no recuerdo que se haya establecido la importancia de reconocer la relación cuerpo-mente para el desarrollo humano. Y mucho menos, comprender  la corporeidad y la motricidad, como elementos que aportan a la formación integral de las personas.</p>
-			<p>Solo se hizo énfasis en entender los conceptos teóricos de la biología, química y física y como estas disciplinas, se podían enseñar en el aula de clases.</p>
-			<p>Ahora como docente de primaria, me doy cuenta de que es valioso que los docentes reconozcamos la importancia que tiene la motricidad y corporeidad, ya que son elementos distintivos y característicos del ser humano. Y como gracias a ellos podemos dar significado al mundo externo.</p>
-			<p>Lastimosamente en la escuela y hasta en la universidad, se sigue promoviendo la separación entre mente-cuerpo. Siendo privilegiado el primero. Y no caemos en cuenta que dicha separación deteriora la  formación integral del sujeto.</p>
-		</div>
-	</div>
-</body>
+   <head>
+      <meta charset="utf-8">
+      <title></title>
+      <link href="../css/style.css" rel="stylesheet">
+      <link href="css/bootstrap.css" rel="stylesheet">
+      <script src="js/bootstrap.js"></script>
+      <script src="js/action.js"></script>
+   </head>
+   <body class="h-100">
+      <div class="container h-100">
+      	<br/><br/><br/>
+         <div class="row text-center">
+         	<div class="col-md-12 fade-in">
+	         	<p>Las habilidades son movimientos y acciones de los músculos se clasifican en: motoras gruesas y motoras finas. Normalmente, ambas se desarrollan al mismo tiempo ya que muchas actividades requieren la utilización conjunta de las dos.</p>
+         	</div>
+         </div>
+         <div class="row text-center">
+         	<div class="col-md-6 fade-in">         		
+               <a>
+                  <div class="tarjeta_03" style="background-image: url('image/menu/opc1.jpeg');">
+                     <div class="filtro_02"></div>
+                     <p>Se refieren a los movimientos que utilizan grandes grupos musculares, como caminar, saltar y escalar.</p>
+                     <div class="nombre_modulo">Habilidades motoras gruesas</div>
+                  </div>
+               </a>
+         	</div>
+         	<div class="col-md-6 fade-in">         		
+               <a onclick="gotoEscena(3);">
+                  <div class="tarjeta_03" style="background-image: url('image/menu/opc2.jpeg');">
+                     <div class="filtro_02"></div>
+                     <p>Se refieren a pequeños movimientos realizados con la lengua, labios, dedos, manos, muñecas, dedos de los pies y los pies.</p>
+                     <div class="nombre_modulo">Habilidades motoras finas</div>
+                  </div>
+               </a>
+         	</div>
+         </div>
+      </div>
+   </body>
 </html>

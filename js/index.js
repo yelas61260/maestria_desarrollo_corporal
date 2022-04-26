@@ -1,4 +1,4 @@
-var EscenaActual = 6;
+var EscenaActual = 1;
 var MostrandoMenu = false;
 var TieneIndicador = true;
 var MostrandoAyuda = false;
@@ -14,18 +14,33 @@ var BtnContinuar = '<img src="recursos/Imagen_moviles.jpg" width="1280" style="c
 var ImgCargando = '<img src="recursos/cargandodatos.gif" width="240" style="padding-top:300px;padding-left:50px">';
 
 var DatosEscenas = [
-            ["Bienvenida",2],//1
-            ["Cuerpo y mente",0],//2
-		    ["Cuerpo y mente",0],//3
-		    ["Corporeidad",0],//4
-		    ["Corporeidad",0],//5
-		    ["Corporeidad",0],//6
-		    ["Motricidad",0],//7
-			["Motricidad",0],//8
-		    ["Reflexión",0],//9
-		    ["Reflexión",0],//10
-		    ["Referencias bibliograficas",0],//11
-		    ["Referencias bibliograficas",0]//12
+            ["Inicio",0],//1
+            ["Menu",0],//2
+		    ["Modulo 1",0],//3
+		    ["Modulo 1",1],//4
+		    ["Modulo 1",2],//5
+		    ["Modulo 1",3],//6
+		    ["Modulo 2",0],//7
+			["Modulo 2",1],//8
+		    ["Modulo 2",2],//9
+		    ["Modulo 2",2],//10
+		    ["Modulo 2",2],//11
+		    ["Modulo 2",2],//12
+		    ["Modulo 2",2],//13
+		    ["Modulo 2",2],//14
+		    ["Modulo 2",3],//15
+		    ["Modulo 3",0],//16
+		    ["Modulo 3",1],//17
+		    ["Modulo 3",2],//18
+		    ["Modulo 3",2],//19
+		    ["Modulo 3",3],//20
+		    ["Modulo 4",1],//21
+		    ["Modulo 4",3],//22
+		    ["Modulo 5",0],//23
+		    ["Modulo 6",0],//24
+		    ["Modulo 6",1],//25
+		    ["Modulo 6",3],//26
+		    ["Modulo 7",0]//27
 ];
 
 var DatosMenu = [
@@ -243,30 +258,25 @@ function Anterior_Escena(){
 
 
 function DefinirBotones(){
-	if(EscenaActual == 1)
+
+	if(DatosEscenas[EscenaActual-1][1]==0)
+	{
+		$("#BotonAtras").hide();
+		$("#BotonAdelante").hide();
+	}
+	else if(DatosEscenas[EscenaActual-1][1]==1)
 	{
 		$("#BotonAtras").hide();
 		$("#BotonAdelante").show();
-	}
-	else if(EscenaActual == DatosEscenas.length)
-	{
-		$("#BotonAtras").show();
-		$("#BotonAdelante").hide();		
-	}
-	else{
-		$("#BotonAtras").show();
-		$("#BotonAdelante").show();
-	}
-
-
-	if(DatosEscenas[EscenaActual-1][1]==1)
-	{
-		$("#BotonAtras").show();
-		$("#BotonAdelante").hide();
 	}
 	else if(DatosEscenas[EscenaActual-1][1]==2)
 	{
-		$("#BotonAtras").hide();
+		$("#BotonAtras").show();
+		$("#BotonAdelante").show();
+	}
+	else if(DatosEscenas[EscenaActual-1][1]==3)
+	{
+		$("#BotonAtras").show();
 		$("#BotonAdelante").hide();
 	}
 }
