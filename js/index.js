@@ -41,6 +41,7 @@ var DatosEscenas = [
 		    ["Modulo 6",1,0,0,0],//25
 		    ["Modulo 6",0,0,1,1],//26
 		    ["Modulo 6",0,1,1,0],//27
+		    ["Modulo 7",1,0,0,0],//28
 		    ["Modulo 7",0,1,0,0]//28
 ];
 
@@ -216,7 +217,7 @@ function Cargar_Escena(){
 	$("#TextoEscenas").html(DatosEscenas[EscenaActual-1][0]);
 	$("#NumeroEscena").html(EscenaActual + " / " + DatosEscenas.length);
 	$("#content_frame").hide();
-	if (EscenaActual == 28) {
+	if (EscenaActual == 29) {
 		$("#content_frame_act").show();
 	}else{
 		$("#content_frame_act").hide();
