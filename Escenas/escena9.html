@@ -7,8 +7,20 @@
       <link href="css/bootstrap.css" rel="stylesheet">
       <script src="js/bootstrap.js"></script>
       <script src="js/action.js"></script>
+      <script type="text/javascript">
+         function btn1() {
+            document.getElementById("cont1_img").style.display = "none";
+            document.getElementById("cont1_text").style.display = "block";
+         }
+         function btn2() {
+            document.getElementById("cont2_img").style.display = "none";
+            document.getElementById("cont2_text").style.display = "block";
+         }        
+      </script>
    </head>
    <body class="h-100">
+      <img class="fondo_normal" src="image/img_e9.png">
+      <!--
       <div class="container h-100">
       	<br/><br/><br/>
          <div class="row text-center">
@@ -18,7 +30,7 @@
          </div>
          <div class="row text-center">
          	<div class="col-md-6 fade-in">         		
-               <a>
+               <a onclick="btn1">
                   <div class="tarjeta_03" style="background-image: url('image/img_e9_1.jpeg');">
                      <div class="filtro_02"></div>
                      <p>Se refieren a los movimientos que utilizan grandes grupos musculares, como caminar, saltar y escalar.</p>
@@ -27,7 +39,7 @@
                </a>
          	</div>
          	<div class="col-md-6 fade-in">         		
-               <a onclick="gotoEscena(3);">
+               <a>
                   <div class="tarjeta_03" style="background-image: url('image/img_e9_2.jpeg');">
                      <div class="filtro_02"></div>
                      <p>Se refieren a pequeños movimientos realizados con la lengua, labios, dedos, manos, muñecas, dedos de los pies y los pies.</p>
@@ -37,5 +49,6 @@
          	</div>
          </div>
       </div>
+   -->
    </body>
 </html>

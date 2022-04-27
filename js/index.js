@@ -216,10 +216,10 @@ function Cargar_Escena(){
 	$("#TextoEscenas").html(DatosEscenas[EscenaActual-1][0]);
 	$("#NumeroEscena").html(EscenaActual + " / " + DatosEscenas.length);
 	$("#content_frame").hide();
-	if (EscenaActual == 28) {
-		$("#content_frame_act").show();
-	}else{
-		$("#content_frame_act").hide();
+	//if (EscenaActual == 28) {
+	//	$("#content_frame_act").show();
+	//}else{
+	//	$("#content_frame_act").hide();
 		$("#content_frame").attr("src", "Escenas/escena"+EscenaActual+".html");
 		$("#carga").show();
 
@@ -228,7 +228,7 @@ function Cargar_Escena(){
 			$("#carga").hide();
 			$("#content_frame").show();
 		});
-	}
+	//}
 
 	var Porcentaje = 100/DatosEscenas.length;
 	var Total = Porcentaje * EscenaActual;
