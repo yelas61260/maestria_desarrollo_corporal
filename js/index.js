@@ -1,4 +1,4 @@
-var EscenaActual = 1;
+var EscenaActual = 25;
 var MostrandoMenu = false;
 var TieneIndicador = true;
 var MostrandoAyuda = false;
