@@ -247,6 +247,27 @@ div.tarjeta_03 p {
 }
 
 /* line 38, ../../../../../Users/cristianyela/Documents/GitHub/maestria_desarrollo_corporal/css/sass/_tools.scss */
+.barraPrincipal #BotonMenu {
+  color: #0166e0;
+  background-color: #fff;
+  padding: 18px 30px;
+  font-size: 20px;
+  font-weight: 700;
+  float: right;
+  cursor: pointer;
+}
+
+/* line 49, ../../../../../Users/cristianyela/Documents/GitHub/maestria_desarrollo_corporal/css/sass/_tools.scss */
+.barraPrincipal #BotonIniciar {
+  color: #0166e0;
+  background-color: #fff;
+  padding: 18px 30px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* line 59, ../../../../../Users/cristianyela/Documents/GitHub/maestria_desarrollo_corporal/css/sass/_tools.scss */
 .barraPrincipal #btn_interfaz {
   position: absolute;
   cursor: pointer;

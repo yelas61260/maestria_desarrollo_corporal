@@ -14,34 +14,34 @@ var BtnContinuar = '<img src="recursos/Imagen_moviles.jpg" width="1280" style="c
 var ImgCargando = '<img src="recursos/cargandodatos.gif" width="240" style="padding-top:300px;padding-left:50px">';
 
 var DatosEscenas = [
-            ["Inicio",0],//1
-            ["Menu",0],//2
-		    ["Modulo 1",0],//3
-		    ["Modulo 1",1],//4
-		    ["Modulo 1",2],//5
-		    ["Modulo 1",3],//6
-		    ["Modulo 2",0],//7
-			["Modulo 2",1],//8
-		    ["Modulo 2",2],//9
-		    ["Modulo 2",2],//10
-		    ["Modulo 2",2],//11
-		    ["Modulo 2",2],//12
-		    ["Modulo 2",2],//13
-		    ["Modulo 2",2],//14
-		    ["Modulo 2",3],//15
-		    ["Modulo 3",0],//16
-		    ["Modulo 3",1],//17
-		    ["Modulo 3",2],//18
-		    ["Modulo 3",2],//19
-		    ["Modulo 3",3],//20
-		    ["Modulo 4",1],//21
-		    ["Modulo 4",3],//22
-		    ["Modulo 5",1],//23
-		    ["Modulo 5",3],//24
-		    ["Modulo 6",0],//25
-		    ["Modulo 6",1],//26
-		    ["Modulo 6",3],//27
-		    ["Modulo 7",0]//28
+            ["Inicio",1,0,0,0],//1
+            ["Menu",0,0,0,0],//2
+		    ["Modulo 1",1,0,0,0],//3
+		    ["Modulo 1",0,0,1,1],//4
+		    ["Modulo 1",0,0,1,1],//5
+		    ["Modulo 1",0,1,1,0],//6
+		    ["Modulo 2",1,0,0,0],//7
+			["Modulo 2",0,0,1,1],//8
+		    ["Modulo 2",0,0,1,1],//9
+		    ["Modulo 2",0,0,1,1],//10
+		    ["Modulo 2",0,0,1,1],//11
+		    ["Modulo 2",0,0,1,1],//12
+		    ["Modulo 2",0,0,1,1],//13
+		    ["Modulo 2",0,0,1,1],//14
+		    ["Modulo 2",0,1,1,0],//15
+		    ["Modulo 3",1,0,0,0],//16
+		    ["Modulo 3",0,0,1,1],//17
+		    ["Modulo 3",0,0,1,1],//18
+		    ["Modulo 3",0,0,1,1],//19
+		    ["Modulo 3",0,1,1,0],//20
+		    ["Modulo 4",1,0,0,0],//21
+		    ["Modulo 4",0,1,1,0],//22
+		    ["Modulo 5",1,0,0,0],//23
+		    ["Modulo 5",0,1,1,0],//24
+		    ["Modulo 6",1,0,0,0],//25
+		    ["Modulo 6",0,0,1,1],//26
+		    ["Modulo 6",0,1,1,0],//27
+		    ["Modulo 7",0,1,0,0]//28
 ];
 
 var DatosMenu = [
@@ -71,6 +71,8 @@ $("#carga").append(ImgCargando);
 $("#carga").show();
 $(".ocultos").hide();
 $("#BotonAtras").hide();
+$("#BotonMenu").hide();
+$("#BotonIniciar").hide();
 
 var isMobile =
 {
@@ -235,10 +237,15 @@ function Cargar_Escena(){
 function CargarRecursos(){
 	$("#BotonAdelante").click(Siguiente_Escena);
 	$("#BotonAtras").click(Anterior_Escena);
+	$("#BotonMenu").click(irMenuPrincipal);
+	$("#BotonIniciar").click(Siguiente_Escena);
 }
 
 function irInicioPrincipal(){
 	IrEscena(1);
+}
+function irMenuPrincipal(){
+	IrEscena(2);
 }
 
 function IrEscena(numero){
@@ -263,25 +270,31 @@ function Anterior_Escena(){
 
 
 function DefinirBotones(){
+	if(DatosEscenas[EscenaActual-1][1]==1)
+	{
+		$("#BotonIniciar").show();
+	}else{
+		$("#BotonIniciar").hide();
+	}
 
-	if(DatosEscenas[EscenaActual-1][1]==0)
+	if(DatosEscenas[EscenaActual-1][2]==1)
 	{
-		$("#BotonAtras").hide();
-		$("#BotonAdelante").hide();
+		$("#BotonMenu").show();
+	}else{
+		$("#BotonMenu").hide();
 	}
-	else if(DatosEscenas[EscenaActual-1][1]==1)
-	{
-		$("#BotonAtras").hide();
-		$("#BotonAdelante").show();
-	}
-	else if(DatosEscenas[EscenaActual-1][1]==2)
+
+	if(DatosEscenas[EscenaActual-1][3]==1)
 	{
 		$("#BotonAtras").show();
-		$("#BotonAdelante").show();
+	}else{
+		$("#BotonAtras").hide();
 	}
-	else if(DatosEscenas[EscenaActual-1][1]==3)
+
+	if(DatosEscenas[EscenaActual-1][4]==1)
 	{
-		$("#BotonAtras").show();
+		$("#BotonAdelante").show();
+	}else{
 		$("#BotonAdelante").hide();
 	}
 }
